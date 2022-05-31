@@ -1,0 +1,8 @@
+
+run on linux
+
+one terminal-streaming data
+python3 stream.py -f crime -b 100(can vary 100-batch size)
+
+another
+/opt/spark/bin/spark-submit client.py 2>log.txt
