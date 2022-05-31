@@ -1,0 +1,71 @@
+
+
+
+zookeeper.connect=localhost:2181
+sudo JMX_PORT=8004 bin/kafka-server-start.sh config/server.properties
+
+
+cd /opt/kafka_2.13-3.1.0
+sudo bin/zookeeper-server-start.sh config/zookeeper.properties
+
+zookeeper-2181
+kafka server-9092
+
+
+
+sudo ./sbt clean dist
+
+sudo cmak.zkhosts="<zookeeper-host>:2181"
+
+ bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic streams-plaintext-input
+ 
+ 
+
+
+cd /opt/CMAK/target/universal/cmak-3.0.0.6
+sudo bin/cmak -Dconfig.file=conf/application.conf -Dhttp.port=8080bin/cmak -Dconfig.file=conf/application.conf -Dhttp.port=8080
+
+
+
+http://127.0.0.1:8080/
+
+
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic streams-plaintext-input --from-beginning
+
+
+
+/opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 data_stream.py
+
+
+/opt/spark/bin/spark-submit --packages /opt/kafka_2.13-3.1.0 data_stream.py
+
+
+
+
+
+
+
+
+
+
+working
+python3 kafka_server.py
+
+python3 consumer_server.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
