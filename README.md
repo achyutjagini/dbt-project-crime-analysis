@@ -1,7 +1,4 @@
-This README properly documents the technologies used (Spark, Kafka, MongoDB), datasets, streaming vs batch experiments, commands, results, and conclusion — everything missing in earlier versions.
-
-🔍 Crime Data Analysis using Spark, Kafka & MongoDB
-📁 Project Repository
+ Crime Data Analysis using Spark, Kafka & MongoDB
 
 Real-time & batch processing of crime datasets using Spark Streaming, Kafka event pipelines and MongoDB storage.
 
@@ -21,18 +18,11 @@ Real-Time Streaming	JSON crime events streamed using Kafka producer → consumer
 
 The objective is to compare real-time streaming vs batch analytics performance and observe execution behaviour with changing window sizes.
 
-🛠 Technologies Used
 Technology	Purpose
 Spark	Batch + streaming computation & querying
 Kafka + Zookeeper	Real-time data production & consumption
 Kafka CMAK UI	Kafka topic monitoring & cluster management
 MongoDB	Storage of consumed crime events
-
-Software list from project report 
-
-PES2UG19CS013_189_230-project r…
-
-:
 
 Apache Spark
 
@@ -44,16 +34,11 @@ CMAK Kafka Dashboard
 
 MongoDB
 
-📥 Input Datasets
+📥 Input Dataset
 Dataset	Format	Used In
 crime-train.csv, test.csv	CSV	Spark batch processing
-police-department-calls-for-service.json	JSON	Kafka real-time streaming
-
+police-department-calls-for-service.json	
 Example JSON schema 
-
-PES2UG19CS013_189_230-project r…
-
-:
 
 {
   "crime_id": "183653763",
