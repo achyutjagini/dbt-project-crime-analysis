@@ -5,7 +5,6 @@ Real-time & batch processing of crime datasets using Spark Streaming, Kafka even
 A DBT course project (UE19CS344) — Jan–May 2022
 Team Members: Achyut Jagini (PES2UG19CS013) • Melavoy Nithin Reddy (PES2UG19CS230) • Koduru Bharath Subba Reddy (PES2UG19CS189) 
 
-PES2UG19CS013_189_230-project r…
 
 📌 Project Overview
 
@@ -108,6 +107,5 @@ The project successfully:
 
 ✔ Streamed crime events using Kafka + Spark Streaming
 ✔ Performed Spark SQL queries on data
-✔ Stored processed records in MongoDB
 ✔ Compared batch vs streaming performance
 ✔ Demonstrated the impact of window sizes on streaming execution time
