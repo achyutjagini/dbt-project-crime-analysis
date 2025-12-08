@@ -1,0 +1,33 @@
+name: Scheduled Auto Commit
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # Runs every day at 00:00 UTC
+  workflow_dispatch:        # Allow manual run
+
+jobs:
+  auto-commit-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Make automated changes
+        run: |
+          echo "Update on $(date)" >> auto_update_log.txt
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "Scheduled auto commit: $(date)" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push
